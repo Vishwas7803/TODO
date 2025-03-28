@@ -1,0 +1,112 @@
+/* Styling for the entire task list container */
+.task-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding: 20px;
+  max-width: 600px;
+  margin: 0 auto;
+  background: linear-gradient(135deg, #f3f3f3, #ffffff);
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Styling for individual task items */
+.task-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover effect for task items */
+.task-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+}
+
+/* Container for action buttons */
+.task-actions {
+  display: flex;
+  gap: 12px;
+}
+
+/* Styling for all buttons */
+.update-btn, .delete-btn, .save-btn, .cancel-btn {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 25px;  /* Rounded buttons */
+  cursor: pointer;
+  transition: background 0.3s, transform 0.3s;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+/* Hover effect for all buttons */
+.update-btn:hover, .delete-btn:hover, .save-btn:hover, .cancel-btn:hover {
+  transform: scale(1.1);
+}
+
+/* Update button with gradient */
+.update-btn {
+  background: linear-gradient(135deg, #4caf50, #81c784);
+  color: #fff;
+  box-shadow: 0 3px 10px rgba(76, 175, 80, 0.4);
+}
+
+/* Delete button with gradient */
+.delete-btn {
+  background: linear-gradient(135deg, #e53935, #ff5252);
+  color: #fff;
+  box-shadow: 0 3px 10px rgba(229, 57, 53, 0.4);
+}
+
+/* Save button with gradient */
+.save-btn {
+  background: linear-gradient(135deg, #2196f3, #64b5f6);
+  color: white;
+  box-shadow: 0 3px 10px rgba(33, 150, 243, 0.4);
+}
+
+/* Cancel button with gradient */
+.cancel-btn {
+  background: linear-gradient(135deg, #757575, #bdbdbd);
+  color: white;
+  box-shadow: 0 3px 10px rgba(117, 117, 117, 0.4);
+}
+
+/* Styling for the input field in edit mode */
+.edit-input {
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  width: 70%;
+  font-size: 14px;
+  transition: box-shadow 0.3s ease;
+}
+
+/* Focus effect on the input field */
+.edit-input:focus {
+  box-shadow: 0 0 8px rgba(33, 150, 243, 0.4);
+  outline: none;
+}
+
+/* Add a smooth fade-in effect for new tasks */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.task-item {
+  animation: fadeIn 0.5s ease-in-out;
+}
