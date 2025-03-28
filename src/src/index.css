@@ -1,0 +1,94 @@
+/* Global body styling with smooth background gradient */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(135deg, #f4f4f4, #e6e6e6);
+  color: #333;
+  line-height: 1.6;
+  transition: background 0.5s ease-in-out;
+}
+
+/* Heading styling with subtle shadow */
+h2 {
+  color: #4caf50;
+  text-align: center;
+  font-size: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin: 20px 0;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+  transition: color 0.3s ease;
+}
+
+/* Heading hover effect */
+h2:hover {
+  color: #388e3c;
+}
+
+/* Button styling with soft shadows and transition */
+button {
+  background: #4caf50;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Button hover effect with scaling and shadow */
+button:hover {
+  background: #45a049;
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Smooth animation for links */
+a {
+  color: #007bff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+/* Link hover effect */
+a:hover {
+  color: #0056b3;
+  text-decoration: underline;
+}
+
+/* Container styling with a centered layout */
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 20px;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+}
+
+/* Container hover effect */
+.container:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.2);
+}
+
+/* Subtle fade-in animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Apply fade-in effect to body elements */
+body, h2, button, .container {
+  animation: fadeIn 0.8s ease-in-out;
+}
